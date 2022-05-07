@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Shibin B Shaji | Introduction to Web Application Penetration Testing </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Script kiddie | Full Stack Developer | Designer | Gamer">
+    
+    <link rel="stylesheet" href="https://shibinbshaji.space/css/style.min.dc0a9303e7e14980d5b3649f68dba0679d003b7a03c56e1a9392ef72c3e0be55.css" integrity="sha256-3AqTA&#43;fhSYDVs2SfaNugZ50AO3oDxW4ak5LvcsPgvlU=" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://shibinbshaji.space">
+    
+    <link rel="shortcut icon" href="https://shibinbshaji.space/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shibinbshaji.space/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shibinbshaji.space/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shibinbshaji.space/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://shibinbshaji.space/posts/intro-to-web-app-pt/">
+    
+    
+    <script type="text/javascript" src="https://shibinbshaji.space/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM="></script>
+
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body><style>
+   
+body { background: black }
+
+.blink {
+  position: relative;
+  font-family: Monaco, Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 24px;
+  color: white;
+
+
+}
+
+.blink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+   
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+   
+  height: 24px;
+   
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+  </style>
+<div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://shibinbshaji.space/images/profile.jpg" alt="profile picture">
+        <h3 title=""><a href="/">&lt; SHIBIN B SHAJI /&gt;<span class="blink"></span></a></h3>
+        <div class="description">
+          <p>Script kiddie | Full Stack Developer | Designer | Gamer</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://www.linkedin.com/in/shibinbshaji/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://twitter.com/shibinbshaji06" rel="me" aria-label="Twitter">
+          <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/shibinbshaji/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/shibinbshaji/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="mailto:shibinbshaji007@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://steamcommunity.com/id/shibinzz" rel="me" aria-label="steam">
+          <i class="fa fa-2x fa-steam" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Shibin B Shaji 2021 </div>
+      </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+      
+        
+        
+        
+        <li><a  href="/" title="">&lt;shibin.b.shaji/&gt;</a></li>
+        
+        
+        <li><a  href="/posts/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/bug-bounty/" title="">Bug Bounty</a></li>
+        
+        
+        <li><a  href="/notes/" title="">Notes</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="false"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+  <style>
+    img{
+      display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+    }
+    </style>
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Introduction to Web Application Penetration Testing
+        </h3>
+        
+        </div>
+
+    <p>Through this writeup, I intend to convey in simple words, how Penetration Testing for a Web Application is performed.  I won’t be going in-depth of each and every aspect but would be giving you an overview of the stuff. I will also be <strong>mentioning</strong> some of the tools used in the process. You will have to google the rest :P</p>
+<h2 id="why-is-web-application-security-necessary">Why is Web Application security necessary?</h2>
+<p>Imagine that you own a company which developed an app ‘A’. This app provides a unique feature which none of the other apps out there provide. It is bound to fetch you some good fortune, and it will. But you decide to not focus on the security aspect of the app to cut the costs. Later on, the app becomes a big hit, people are talking about it - is making headlines. Yey.. :D
+Keep in mind that you were not careful with how your app handles data. One day you wake up; Your app makes it to the main headlines again, but this time it read,</p>
+<h4 id="data-of-thousands-of-users-of-app-a-put-up-for-sale-in-the-dark-web"><strong>“Data of Thousands of users of app ‘A’ put up for sale in the Dark Web”</strong></h4>
+<p>This is a big slap on the face. Would this have happened if you had spent a little more time for enhancing the security of the app?</p>
+<p>What else could have happend to you? Attackers could have taken advantage of some functional loopholes in the application which could have caused a huge financial loss for you or, the attackers could deny access for other users to the application just for fun. Whatever the case may be, it leaves a negative remark on your app and thereby losing business.</p>
+<p>I can go on, but I’m gonna stop right here and say, this is why security is necessary.</p>
+<h2 id="steps-of-web-application-penetration-testing">Steps of Web Application Penetration Testing</h2>
+<p>I’m trying to keep it simple here, the actual steps are massive.</p>
+<p>There are 3 steps for Penetration Testing:</p>
+<ol>
+<li>Planning and Reconnaissance.</li>
+<li>Identifying Vulnerabilities.</li>
+<li>Exploitation.</li>
+</ol>
+<p>You should also document each step properly. This eliminates a lot of confusion and saves time because you don’t have to do a step again to see the result it produces, you can just refer the document. Let&rsquo;s dive into the interesting content. :D</p>
+<hr>
+<h2 id="1-planning-and-reconnaissance"><strong>1. Planning and Reconnaissance.</strong></h2>
+<h2 id="planning">Planning</h2>
+<p>Before starting the test, make sure that you understand the web-app very well. You should have a clear idea of what you intend to achieve through this penetration test. You should also  be aware of what might crash the server, what might crash the app etc.
+If you are doing this for a client, they might want you to perform either a Black Box Testing, a White Box Testing or a Grey box Testing.</p>
+<ul>
+<li><strong>Black Box testing:</strong> You test the application without the  client giving you any authentication to the application.</li>
+<li><strong>White Box Testing:</strong> You test the application by knowing clearly the code lying underneath it. You are expected to analyse the source code and find vulnerabilities.</li>
+<li><strong>Grey Box Testing:</strong> You test the application by the authentication provided by the client, to their backend softwares.</li>
+</ul>
+<h2 id="reconnaissance">Reconnaissance</h2>
+<p>Also known as Open Source Intelligence Gathering (OSINT), it can be said as the very first step to Penetration testing. In this step you are expected to gather every information that you could possibly get about a web application or the scope you are testing.</p>
+<p>Reconnaissance is classified into two types:</p>
+<ol>
+<li>Passive Reconnaissance</li>
+<li>Active Reconnaissance</li>
+</ol>
+<h3 id="passive-reconnaissance">Passive Reconnaissance</h3>
+<p>In Passive Reconnaissance, you gather all the information without actively interacting with the target. Some of the methods of Passive Reconnaissance are mentioned below:</p>
+<p><strong>Finding out the technology of the target</strong></p>
+<p>It is important to know what technology the target system is using so that we can narrow down the number of tests that we need to perform on that target.
+For example, consider that a web application is running on Angular and Flask. So while testing, we need not test the web application to see if has any vulnerabilities that are only present in PHP. (In short, the site ain’t PHP, so why would you wanna test for PHP vulnerabilities. Duh! )</p>
+<p>We can find out the technology used by the web app with a simple browser called <a href="https://www.wappalyzer.com/">Wapplyzer</a>. It is available for both Chrome and Mozilla as a browser extension.</p>
+<p><img src="/posts/intro-to-web-app-pt/wappalyzer.png" alt=""></p>
+<p>If you’re scared that these plugins might have backdoors in them, you can use a site called <a href="https://builtwith.com/">BuiltWith</a> to extract the same information.</p>
+<p><strong>Finding out the sub-domains</strong></p>
+<p>There is no point in increasing your attacking skills without increasing your attack surface. Enumerating the sub-domains are one way of doing so.</p>
+<p><img src="/posts/intro-to-web-app-pt/subdomain.png" alt=""></p>
+<p>We can enumerate the sub-domains of a web app through <a href="https://crt.sh/">crt.sh</a>.</p>
+<p>Enter the domain for which you need to find out the sub-domains, and crt.sh will give you the result.</p>
+<p><img src="/posts/intro-to-web-app-pt/crt.png" alt=""></p>
+<p><strong>Data from search engines</strong></p>
+<p>Search engines are  powerful tools to find out information about a target. The search engines can crawl inside web pages and fetch data which might be harder to find while manually browsing the website.
+We can force the search engine to include particular type of files in the search results, like log files. It can be achieved by using Google Dorks. If you have used &lsquo;<code>index of /&lt;series / movie name &gt;</code>&rsquo; to download TV series or movies, you have already used Google Dorks.</p>
+<p><img src="/posts/intro-to-web-app-pt/dorks.png" alt=""></p>
+<p>Many more Google Dorks can be found in <a href="https://null-byte.wonderhowto.com/how-to/use-google-hack-googledorks-0163566/">Null Byte</a>.</p>
+<p>New Google Dorks come up in <a href="https://www.exploit-db.com/google-hacking-database">exploit-db.com</a>.</p>
+<p><strong>Data from social media websites</strong></p>
+<p>Social media websites are another great way to gather information about something or someone. This section is something which I don’t need to tell much about, everyone is an expert in this. :P</p>
+<p>If you’re not one, here are some of the data that you should consider gathering:</p>
+<ul>
+<li>Facebook - Date of Birth, Email ID, Hometown, First car etc.</li>
+<li>LinkedIn - First Place of Work, Official Email ID etc.</li>
+</ul>
+<p><strong>Web archives</strong></p>
+<p>Did you know that once your website is web-facing, they will be archived and stored and can be viewed later even if you take it off the Internet?
+To make it more clear, did you know that you can search for how a website looked way back in the year 2000. And I’m not talking about googling, “<!-- raw HTML omitted --> in 2000”. There&rsquo;s another way.</p>
+<p>Go to <a href="http://web.archive.org/">Web Archive</a> and then search for the website you want to see an older version of.</p>
+<p><img src="/posts/intro-to-web-app-pt/archive1.png" alt=""></p>
+<p><img src="/posts/intro-to-web-app-pt/archive2.png" alt=""></p>
+<p>How is this relevant here? Imagine that you had unknowingly typed your login credentials on your web app as a title (idk why I chose an example which is very unlikely, this sounded funny :P ) . You realise it and remove it in the next update. Now if I, as an attacker, want to see those credentials which I knew were there from some public forums, I can just go to one of those web archives and see if your page was saved.</p>
+<h3 id="active-reconnaissance">Active Reconnaissance</h3>
+<p>In Active reconnaissance, we actively engage with the target to gather information.</p>
+<p>Some of the methods are:</p>
+<p><strong>Port Scanning</strong></p>
+<p>No. Not the USB port kind of thing. Although, now that I think of it, it can be used as an example to explain the same. What if you were given a computer with lots of sensitive information and you want to copy that information to put it out into the world. You search for a USB port to connect to so that you can connect your pen drive and copy those information.
+Port scanning is somewhat the same. But instead of a physical port, you search for a logical port which exists in the software level. Port is something which is used by the server to communicate with the outer world. So if there are open ports in your server, they might attract some interested people.
+These ports can be discovered by a tool called <a href="https://nmap.org/">Nmap</a>.</p>
+<p><img src="/posts/intro-to-web-app-pt/nmap1.png" alt=""></p>
+<p>Nmap can also be used for more than just discovering ports. Feel free to explore.</p>
+<p><strong>Identifying Server OS</strong></p>
+<p>This is also one of the crucial steps of reconnaissance. Knowing the OS will help you determine if the server has got some weird behaviour which you can take advantage of. Knowing the OS version can help you search up for any publicly disclosed vulnerabilities which can be used to compromise the server.</p>
+<p><strong>Web Application Scanning</strong></p>
+<p>In this method we scan the the target to get more information. One of the main things to look for here is open directories. Due to the last minute rush to complete the deployment of a web application, what happens most of the time is, developers forget to restrict access to other files on the server which can be accessed by explicitly typing their name in the search field. A tool which can be used to find this is <a href="https://github.com/maurosoria/dirsearch">dirsearch</a>.</p>
+<p>You might be wondering what all can be found. Sensitive files, admin portals, login pages not meant to be disclosed in public…. The list goes on.</p>
+<p><strong>Gentle reminder, what is the status of the note that you were keeping? :P</strong></p>
+<hr>
+<h2 id="2-identifying-vulnerabilities"><strong>2. Identifying Vulnerabilities</strong></h2>
+<p>Now, let&rsquo;s assume that our recon has concluded. Next step is to find out vulnerabilities of the application. Vulnerabilities are weak points which an attacker can take advantage of. Some of the steps for identifying vulnerabilities are:</p>
+<p><strong>Searching for Vulnerabilities with software versions</strong></p>
+<p>Glad you kept notes. Now you can refer the notes to see different types of firmwares or softwares that is running the application and its infrastructure and then search for any vulnerabilities that are available.
+One of the places which you can search up for vulnerabilities is <a href="https://www.exploit-db.com/google-hacking-database">exploit-db</a>. You can enter the software name and version to see if there are any known vulnerabilities.</p>
+<p><img src="/posts/intro-to-web-app-pt/exploit-db.png" alt=""></p>
+<p><strong>Manually surf the web application</strong></p>
+<p>It is necessary to know how the web application functions. You should know every nook and corner of the web application that you are testing. Visit all the links. Use all the functionalities. Fill out text fields. Click all the buttons. Do everything that is possible to fully understand the application.
+If you remember, we did enumerate some subdomains and directories in our reconnaissance part. Now is the time to explore those. Explore functionalities, if any, in those pages too.</p>
+<p><strong>Notice the behaviour of the Web Application</strong></p>
+<p>Now that you are familiar with the web application, see if you can get the application to respond weirdly. If you enter values like ‘,”,&gt; etc and it returns an error on the web app, there you go, you triggered a weird action. Note these down.</p>
+<p><img src="/posts/intro-to-web-app-pt/write-that-down.jpg" alt=""></p>
+<p>Two tools which can be used to analyse weird behaviour are:</p>
+<ol>
+<li><strong>Burpsuite</strong></li>
+</ol>
+<p><a href="https://portswigger.net/burp">Burpsuite</a> is an application which can be used to capture the traffic that the client and server exchanges for its working. With the help of BurpSuite, you can:</p>
+<ul>
+<li>Edit the parameters</li>
+<li>Brute force login pages</li>
+<li>Repeat requests</li>
+<li>Decode some basic encodings</li>
+</ul>
+<p>And much more. Extensions are available which take the usability to another level.</p>
+<ol start="2">
+<li><strong>Wireshark</strong></li>
+</ol>
+<p><a href="https://www.wireshark.org/">Wireshark</a> is not that much relevant here. It is used to capture and analyse network traffic. If you’ve been told not to connect to a public wifi and visit a site without https because hackers will steal your information, this is how they do it.</p>
+<p><img src="/posts/intro-to-web-app-pt/wireshark.png" alt=""></p>
+<p><strong>OWASP Top 10</strong></p>
+<p>OWASP (Open Web Application Security Project) is an international non-profit organisation which focuses on web security. Their main intention is to make the materials free.
+OWASP has a regularly updated <a href="https://owasp.org/www-project-top-ten/">list</a> of critical vulnerabilities that might be present in web applications. These vulnerabilities can be a result of:</p>
+<ul>
+<li>Developers mistake in coding a functionality</li>
+<li>Poor judgement of the cryptography used</li>
+<li>Improper handling of data</li>
+</ul>
+<p>I’m stopping the list here.</p>
+<p>Below are the OWASP top 10 vulnerabilities of 2020:</p>
+<ol>
+<li>Injection.</li>
+<li>Broken Authentication.</li>
+<li>Sensitive Data Exposure.</li>
+<li>XML External Entity (XXE).</li>
+<li>Broken Access Control.</li>
+<li>Security Misconfiguration.</li>
+<li>Cross Site Scripting.</li>
+<li>Insecure Deserialization.</li>
+<li>Using components with known Vulnerabilities.</li>
+<li>Insufficient Logging and Monitoring.</li>
+</ol>
+<hr>
+<h2 id="3-exploiting"><strong>3. Exploiting</strong></h2>
+<p>At last, we are here. The information that we gathered, the vulnerabilities that we identified and notes that we kept, everything was to achieve this goal. To exploit.
+Exploitation is the process of taking advantage of the vulnerabilities to do some serious damage or to find out the extend to which a vulnerability can be misused. Exploitation might not be that much easy. Sometimes, multiple vulnerabilities need to be chained together to perform an exploitation. Perfect execution of these attacks might require some good amount of experience.
+Some of the tools which can be used for exploitation include:</p>
+<ol>
+<li>
+<p><strong>BurpSuite</strong>
+Yes, <a href="https://portswigger.net/burp">Burpsuite</a> can be used here also.</p>
+</li>
+<li>
+<p><strong>SQLMap</strong></p>
+</li>
+</ol>
+<p>There is a vulnerability called SQL Injection which allows a malicious user to directly interact  with the database connected to the web application. Well, the consequences? They can read all the values of the database which might contain details like users credentials, Credit Card informations, contact details etc. of everyone that has registered to that website. (Data Breach Alert!!!!)
+SQL Injection requires a lot of trial and error for its successful exploitation. <a href="http://sqlmap.org/">SQLMap</a> helps us automate the process.</p>
+<p><img src="/posts/intro-to-web-app-pt/sqlmap.png" alt=""></p>
+<ol start="3">
+<li><strong>Metasploit</strong></li>
+</ol>
+<p>This is a dream tool for hackers. With more than thousands of scripts and exploits, <a href="https://www.metasploit.com/">Metasploit</a> is surely one of the dangerous tools if it falls into the wrong hands. Don&rsquo;t know how to write scripts to exploit a particular vulnerability? Or don&rsquo;t you have time for that? Wanna build your custom scripts? Fear not, Metasploit has got you covered. It can be used to create backdoors, malicious payloads etc. It can also be used in the reconnaissance stage, because it can be used to run port scans, banner grabbing etc.</p>
+<p><img src="/posts/intro-to-web-app-pt/metasploit.png" alt=""></p>
+<ol start="4">
+<li><strong>Hydra</strong></li>
+</ol>
+<p>There are many password-cracking techniques. Brute-forcing with a set of common passwords (yes, even in 2020 people use passwords like ‘qwerty123’) is one of them. But these lists will contain thousands, or even millions of possible combinations. Manually trying all those in a login page is impossible.
+Thats where Hydra comes into play. It is one of the fastest password-cracking tools out there.</p>
+<p><img src="/posts/intro-to-web-app-pt/hydra.png" alt=""></p>
+<hr>
+<h2 id="documentation"><strong>Documentation</strong></h2>
+<p>No one likes this part. But this is another crucial step because your findings need to be understood by the developers in order to patch them. The notes will help you here as well. :)</p>
+<hr>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>This is a skill which cannot be acquired overnight. It takes a good amount of dedication and hard work. The testing is not limited to what I mentioned in this writeup. Keep yourselves updated about new methodologies to find bugs. I hope this article served its purpose.</p>
+<p>Thank you. :)</p>
+<p>(I ought to mention. Articles are polished by <a href="https://www.linkedin.com/in/hereonstealth/">Praveen G Anand</a>)</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/infosec/">infosec</a><a class="tag" href="/tags/cyber-security/">cyber security</a><a class="tag" href="/tags/penetration-testing/">penetration testing</a><a class="tag" href="/tags/hacking/">hacking</a></span>
+
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-168075703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

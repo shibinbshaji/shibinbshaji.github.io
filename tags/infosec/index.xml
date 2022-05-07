@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>infosec on Shibin B Shaji</title>
+    <link>https://shibinbshaji.space/tags/infosec/</link>
+    <description>Recent content in infosec on Shibin B Shaji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Sep 2021 16:23:18 +0530</lastBuildDate>
+    
+	<atom:link href="https://shibinbshaji.space/tags/infosec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HackTheBox - Knife</title>
+      <link>https://shibinbshaji.space/posts/htb-knife/</link>
+      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.space/posts/htb-knife/</guid>
+      <description>This is a retired Easy Linux Box.
+Machine IP: 10.10.10.242</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Web Application Penetration Testing</title>
+      <link>https://shibinbshaji.space/posts/intro-to-web-app-pt/</link>
+      <pubDate>Sat, 11 Jul 2020 18:51:54 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.space/posts/intro-to-web-app-pt/</guid>
+      <description>Through this writeup, I intend to convey in simple words, how Penetration Testing for a Web Application is performed.</description>
+    </item>
+    
+    <item>
+      <title>A Long Overdue Write-up: How I got into the Oppo Hall of Fame</title>
+      <link>https://shibinbshaji.space/bug-bounty/oppo-bugbounty-writeup/</link>
+      <pubDate>Thu, 28 May 2020 20:18:36 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.space/bug-bounty/oppo-bugbounty-writeup/</guid>
+      <description>I don&amp;rsquo;t do Bug Bounty programs much, so this section of the website will be as deserted as the roads when we all were in quarantine.</description>
+    </item>
+    
+    <item>
+      <title>Using Pythons Pickling to Explain Insecure Deserialization</title>
+      <link>https://shibinbshaji.space/posts/using-pythons-pickling-to-explain-insecure-deserialization/</link>
+      <pubDate>Sun, 17 May 2020 13:31:25 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.space/posts/using-pythons-pickling-to-explain-insecure-deserialization/</guid>
+      <description>Before I go on rambling about what insecure deserialization is, I will explain what serialization and deserialization is.</description>
+    </item>
+    
+  </channel>
+</rss>

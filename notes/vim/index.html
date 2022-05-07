@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Shibin B Shaji | Vim </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Script kiddie | Full Stack Developer | Designer | Gamer">
+    
+    <link rel="stylesheet" href="https://shibinbshaji.space/css/style.min.dc0a9303e7e14980d5b3649f68dba0679d003b7a03c56e1a9392ef72c3e0be55.css" integrity="sha256-3AqTA&#43;fhSYDVs2SfaNugZ50AO3oDxW4ak5LvcsPgvlU=" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://shibinbshaji.space">
+    
+    <link rel="shortcut icon" href="https://shibinbshaji.space/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shibinbshaji.space/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shibinbshaji.space/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shibinbshaji.space/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://shibinbshaji.space/notes/vim/">
+    
+    
+    <script type="text/javascript" src="https://shibinbshaji.space/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM="></script>
+
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body><style>
+   
+body { background: black }
+
+.blink {
+  position: relative;
+  font-family: Monaco, Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 24px;
+  color: white;
+
+
+}
+
+.blink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+   
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+   
+  height: 24px;
+   
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+  </style>
+<div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://shibinbshaji.space/images/profile.jpg" alt="profile picture">
+        <h3 title=""><a href="/">&lt; SHIBIN B SHAJI /&gt;<span class="blink"></span></a></h3>
+        <div class="description">
+          <p>Script kiddie | Full Stack Developer | Designer | Gamer</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://www.linkedin.com/in/shibinbshaji/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://twitter.com/shibinbshaji06" rel="me" aria-label="Twitter">
+          <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/shibinbshaji/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/shibinbshaji/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="mailto:shibinbshaji007@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://steamcommunity.com/id/shibinzz" rel="me" aria-label="steam">
+          <i class="fa fa-2x fa-steam" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Shibin B Shaji 2021 </div>
+      </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+      
+        
+        
+        
+        <li><a  href="/" title="">&lt;shibin.b.shaji/&gt;</a></li>
+        
+        
+        <li><a  href="/posts/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/bug-bounty/" title="">Bug Bounty</a></li>
+        
+        
+        <li><a  href="/notes/" title="">Notes</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="false"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+  <style>
+    img{
+      display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+    }
+    </style>
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Vim
+        </h3>
+        
+        </div>
+
+    <h2 id="types-of-mode">Types of mode</h2>
+<ul>
+<li>insert mode</li>
+<li>replace mode</li>
+<li>visual mode
+<ul>
+<li>visual line</li>
+<li>visual block</li>
+</ul>
+</li>
+<li>command line mode</li>
+</ul>
+<p><strong>Starts with normal mode</strong></p>
+<p>Normal mode -&gt; insert mode : press <code>i</code></p>
+<p>Normal mode -&gt; replace mode : press <code>r</code></p>
+<p>Normal mode -&gt; visual mode : press <code>v</code></p>
+<p>Normal mode -&gt; visual mode : press shift +<code>v</code></p>
+<p>Normal mode -&gt; visual mode : press ctrl +<code>v</code></p>
+<p>Normal mode -&gt; command line mode : press <code>:</code></p>
+<p>any mode -&gt; normal mode : <code>&lt;esc&gt;</code></p>
+<h2 id="normal-mode">normal mode</h2>
+<p><strong>movement keys</strong></p>
+<ul>
+<li><code>h</code> : left</li>
+<li><code>j</code> : down</li>
+<li><code>k</code> : up</li>
+<li><code>l</code> : right</li>
+<li><code>w</code> : move forward by one word</li>
+<li><code>b</code> : move backward by one word</li>
+<li><code>e</code> : end of the word</li>
+<li><code>0</code> : beginning of the line</li>
+<li><code>$</code> : end of the line</li>
+<li><code>^</code>: non first empty character line</li>
+<li><code>^U</code>: move up</li>
+<li><code>^D</code>: move down</li>
+<li><code>G</code>: move all the way down (<strong>case sensitive</strong>)</li>
+<li><code>gg</code>: move all the way up (<strong>case sensitive</strong>)</li>
+<li><code>L</code>: Lowest line on screen (<strong>case sensitive</strong>)</li>
+<li><code>M</code>: Middle line on screen (<strong>case sensitive</strong>)</li>
+<li><code>H</code>: Highest line on screen (<strong>case sensitive</strong>)</li>
+<li><code>f&lt;char&gt;</code>: jump forward to the first occurance of <code>&lt;char&gt;</code> (<strong>case sensitive</strong>)</li>
+<li><code>F&lt;char&gt;</code>: jump backward to the first occurance of <code>&lt;char&gt;</code> (<strong>case sensitive</strong>)</li>
+<li><code>t&lt;char&gt;</code>: jump forward to <code>&lt;char&gt;</code> just before it. (<strong>case sensitive</strong>)</li>
+<li><code>T&lt;char&gt;</code>: jump backward to <code>&lt;char&gt;</code> just before it. (<strong>case sensitive</strong>)</li>
+</ul>
+<p><strong>editing</strong></p>
+<ul>
+<li><code>x</code> : delete</li>
+<li><code>o</code> : Creates new line just below the current line and changes to insert mode (<strong>case sensitive</strong>)</li>
+<li><code>O</code> : Creates new line just above the current line and changes to insert mode (<strong>case sensitive</strong>)</li>
+<li><code>/</code> : search</li>
+<li><code>a</code> : append</li>
+<li><code>.</code> : repeat previous taks</li>
+<li><code>d&lt;movement key&gt;</code>: delete a char in the direction of <code>&lt;movement key&gt;</code></li>
+<li><code>c&lt;movement key&gt;</code>: replace a char in the direction of <code>&lt;movement key&gt;</code></li>
+<li><code>dd</code>: deletes the whole line</li>
+<li><code>cc</code> : deletes the whole line and puts to edit mode</li>
+<li><code>u</code>: undo</li>
+<li><code>^r</code>: redo</li>
+<li><code>y</code>: copy</li>
+<li><code>paste</code>:</li>
+<li><code>~</code>: change case</li>
+<li><code>di(</code> or <code>di</code>[`: delete inside paranthesis</li>
+<li><code>ci(</code> or <code>ci</code>[`: change inside paranthesis</li>
+</ul>
+<p><strong>repeating commands</strong></p>
+<ul>
+<li><code>&lt;num&gt;&lt;command&gt;</code>: the <code>&lt;command&gt;</code> will be done <code>&lt;num&gt;</code> time(s)</li>
+</ul>
+<h2 id="insert-mode">insert mode</h2>
+<h2 id="replace-mode">replace mode</h2>
+<h2 id="visual-mode">visual mode</h2>
+<p><strong>movement keys</strong></p>
+<ul>
+<li><code>h</code> : left</li>
+<li><code>j</code> : down</li>
+<li><code>k</code> : up</li>
+<li><code>l</code> : right</li>
+<li><code>w</code> : move forward by one word</li>
+<li><code>b</code> : move backward by one word</li>
+<li><code>e</code> : end of the word</li>
+<li><code>0</code> : beginning of the line</li>
+<li><code>$</code> : end of the line</li>
+<li><code>^</code>: non first empty character line</li>
+<li><code>^U</code>: move up</li>
+<li><code>^D</code>: move down</li>
+<li><code>G</code>: move all the way down (<strong>case sensitive</strong>)</li>
+<li><code>gg</code>: move all the way up (<strong>case sensitive</strong>)</li>
+<li><code>L</code>: Lowest line on screen (<strong>case sensitive</strong>)</li>
+<li><code>M</code>: Middle line on screen (<strong>case sensitive</strong>)</li>
+<li><code>H</code>: Highest line on screen (<strong>case sensitive</strong>)</li>
+<li><code>f&lt;char&gt;</code>: jump forward to the first occurance of <code>&lt;char&gt;</code> (<strong>case sensitive</strong>)</li>
+<li><code>F&lt;char&gt;</code>: jump backward to the first occurance of <code>&lt;char&gt;</code> (<strong>case sensitive</strong>)</li>
+<li><code>t&lt;char&gt;</code>: jump forward to <code>&lt;char&gt;</code> just before it. (<strong>case sensitive</strong>)</li>
+<li><code>T&lt;char&gt;</code>: jump backward to <code>&lt;char&gt;</code> just before it. (<strong>case sensitive</strong>)</li>
+</ul>
+<h2 id="command-line-mode">command line mode</h2>
+<ul>
+<li><code>quit</code> , <code>q</code> : quit</li>
+<li><code>w</code>: write</li>
+<li>`help <!-- raw HTML omitted --> : help for <!-- raw HTML omitted --></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/notes/">notes</a></span>
+
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-168075703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

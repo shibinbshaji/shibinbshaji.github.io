@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pickle on Shibin B Shaji</title>
+    <link>https://shibinbshaji.space/tags/pickle/</link>
+    <description>Recent content in pickle on Shibin B Shaji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 May 2020 13:31:25 +0530</lastBuildDate>
+    
+	<atom:link href="https://shibinbshaji.space/tags/pickle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Pythons Pickling to Explain Insecure Deserialization</title>
+      <link>https://shibinbshaji.space/posts/using-pythons-pickling-to-explain-insecure-deserialization/</link>
+      <pubDate>Sun, 17 May 2020 13:31:25 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.space/posts/using-pythons-pickling-to-explain-insecure-deserialization/</guid>
+      <description>Before I go on rambling about what insecure deserialization is, I will explain what serialization and deserialization is.</description>
+    </item>
+    
+  </channel>
+</rss>

