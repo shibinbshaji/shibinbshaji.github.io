@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>oppo on Shibin B Shaji</title>
-    <link>shibinbshaji.com/tags/oppo/</link>
+    <link>http://shibinbshaji.com/tags/oppo/</link>
     <description>Recent content in oppo on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 May 2020 20:18:36 +0530</lastBuildDate>
     
-	<atom:link href="shibinbshaji.com/tags/oppo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://shibinbshaji.com/tags/oppo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Long Overdue Write-up: How I got into the Oppo Hall of Fame</title>
-      <link>shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</link>
+      <link>http://shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</link>
       <pubDate>Thu, 28 May 2020 20:18:36 +0530</pubDate>
       
-      <guid>shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</guid>
+      <guid>http://shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</guid>
       <description>I don&amp;rsquo;t do Bug Bounty programs much, so this section of the website will be as deserted as the roads when we all were in quarantine.</description>
     </item>
     
