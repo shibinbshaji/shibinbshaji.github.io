@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>notes on Shibin B Shaji</title>
-    <link>https://shibinbshaji.com/tags/notes/</link>
+    <link>shibinbshaji.com/tags/notes/</link>
     <description>Recent content in notes on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Jul 2020 10:33:29 +0530</lastBuildDate>
     
-	<atom:link href="https://shibinbshaji.com/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="shibinbshaji.com/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vim</title>
-      <link>https://shibinbshaji.com/notes/vim/</link>
+      <link>shibinbshaji.com/notes/vim/</link>
       <pubDate>Sun, 12 Jul 2020 10:33:29 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/notes/vim/</guid>
+      <guid>shibinbshaji.com/notes/vim/</guid>
       <description>Types of mode  insert mode replace mode visual mode  visual line visual block   command line mode  Starts with normal mode</description>
     </item>
     
     <item>
       <title>Unix</title>
-      <link>https://shibinbshaji.com/notes/unix/</link>
+      <link>shibinbshaji.com/notes/unix/</link>
       <pubDate>Thu, 02 Jul 2020 10:38:28 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/notes/unix/</guid>
+      <guid>shibinbshaji.com/notes/unix/</guid>
       <description>Tips  History of commands can be found under .bash_history. .</description>
     </item>
     
     <item>
       <title>Privilege Escalations</title>
-      <link>https://shibinbshaji.com/notes/privilege-escalations/</link>
+      <link>shibinbshaji.com/notes/privilege-escalations/</link>
       <pubDate>Thu, 02 Jul 2020 10:36:43 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/notes/privilege-escalations/</guid>
+      <guid>shibinbshaji.com/notes/privilege-escalations/</guid>
       <description>Using find&#39;s -exec parameter
 sudo -u \&amp;lt;user-that-can-run-vim\&amp;gt; find / -name example -exec !</description>
     </item>
     
     <item>
       <title>Intro to Assembly Language and Exploit Development</title>
-      <link>https://shibinbshaji.com/notes/assembly-exploit-dev/</link>
+      <link>shibinbshaji.com/notes/assembly-exploit-dev/</link>
       <pubDate>Thu, 02 Jul 2020 10:20:53 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/notes/assembly-exploit-dev/</guid>
+      <guid>shibinbshaji.com/notes/assembly-exploit-dev/</guid>
       <description>Syntax mov
  global _start : global tells the linker that the entry point of our program is _start.</description>
     </item>

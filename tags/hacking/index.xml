@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hacking on Shibin B Shaji</title>
-    <link>https://shibinbshaji.com/tags/hacking/</link>
+    <link>shibinbshaji.com/tags/hacking/</link>
     <description>Recent content in hacking on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Sep 2021 16:23:18 +0530</lastBuildDate>
     
-	<atom:link href="https://shibinbshaji.com/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="shibinbshaji.com/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HackTheBox - Knife</title>
-      <link>https://shibinbshaji.com/posts/htb-knife/</link>
+      <link>shibinbshaji.com/posts/htb-knife/</link>
       <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/posts/htb-knife/</guid>
+      <guid>shibinbshaji.com/posts/htb-knife/</guid>
       <description>This is a retired Easy Linux Box.
 Machine IP: 10.10.10.242</description>
     </item>
     
     <item>
       <title>Introduction to Web Application Penetration Testing</title>
-      <link>https://shibinbshaji.com/posts/intro-to-web-app-pt/</link>
+      <link>shibinbshaji.com/posts/intro-to-web-app-pt/</link>
       <pubDate>Sat, 11 Jul 2020 18:51:54 +0530</pubDate>
       
-      <guid>https://shibinbshaji.com/posts/intro-to-web-app-pt/</guid>
+      <guid>shibinbshaji.com/posts/intro-to-web-app-pt/</guid>
       <description>Through this writeup, I intend to convey in simple words, how Penetration Testing for a Web Application is performed.</description>
     </item>
     
