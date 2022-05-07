@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hackthebox on Shibin B Shaji</title>
-    <link>https://shibinbshaji.space/tags/hackthebox/</link>
+    <link>https://shibinbshaji.com/tags/hackthebox/</link>
     <description>Recent content in hackthebox on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Sep 2021 16:23:18 +0530</lastBuildDate>
     
-	<atom:link href="https://shibinbshaji.space/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shibinbshaji.com/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HackTheBox - Knife</title>
-      <link>https://shibinbshaji.space/posts/htb-knife/</link>
+      <link>https://shibinbshaji.com/posts/htb-knife/</link>
       <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
       
-      <guid>https://shibinbshaji.space/posts/htb-knife/</guid>
+      <guid>https://shibinbshaji.com/posts/htb-knife/</guid>
       <description>This is a retired Easy Linux Box.
 Machine IP: 10.10.10.242</description>
     </item>
