@@ -2,102 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Shibin B Shaji</title>
-    <link>http://shibinbshaji.com/tags/</link>
+    <link>https://shibinbshaji.com/tags/</link>
     <description>Recent content in Tags on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Sep 2021 16:23:18 +0530</lastBuildDate>
-    
-	<atom:link href="http://shibinbshaji.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 16 Sep 2023 15:22:29 +0530</lastBuildDate><atom:link href="https://shibinbshaji.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cyber security</title>
-      <link>http://shibinbshaji.com/tags/cyber-security/</link>
-      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      <link>https://shibinbshaji.com/tags/cyber-security/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/cyber-security/</guid>
+      <guid>https://shibinbshaji.com/tags/cyber-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game</title>
+      <link>https://shibinbshaji.com/tags/game/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.com/tags/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gamehacking</title>
+      <link>https://shibinbshaji.com/tags/gamehacking/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.com/tags/gamehacking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hacking</title>
-      <link>http://shibinbshaji.com/tags/hacking/</link>
-      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      <link>https://shibinbshaji.com/tags/hacking/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/hacking/</guid>
+      <guid>https://shibinbshaji.com/tags/hacking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackthebox</title>
-      <link>http://shibinbshaji.com/tags/hackthebox/</link>
-      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      <link>https://shibinbshaji.com/tags/hackthebox/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/hackthebox/</guid>
+      <guid>https://shibinbshaji.com/tags/hackthebox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>infosec</title>
-      <link>http://shibinbshaji.com/tags/infosec/</link>
-      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      <link>https://shibinbshaji.com/tags/infosec/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/infosec/</guid>
+      <guid>https://shibinbshaji.com/tags/infosec/</guid>
       <description></description>
     </item>
     
     <item>
       <title>penetration testing</title>
-      <link>http://shibinbshaji.com/tags/penetration-testing/</link>
-      <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
+      <link>https://shibinbshaji.com/tags/penetration-testing/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/penetration-testing/</guid>
+      <guid>https://shibinbshaji.com/tags/penetration-testing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>notes</title>
-      <link>http://shibinbshaji.com/tags/notes/</link>
+      <link>https://shibinbshaji.com/tags/notes/</link>
       <pubDate>Sun, 12 Jul 2020 10:33:29 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/notes/</guid>
+      <guid>https://shibinbshaji.com/tags/notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bugbounty</title>
-      <link>http://shibinbshaji.com/tags/bugbounty/</link>
+      <link>https://shibinbshaji.com/tags/bugbounty/</link>
       <pubDate>Thu, 28 May 2020 20:18:36 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/bugbounty/</guid>
+      <guid>https://shibinbshaji.com/tags/bugbounty/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oppo</title>
-      <link>http://shibinbshaji.com/tags/oppo/</link>
+      <link>https://shibinbshaji.com/tags/oppo/</link>
       <pubDate>Thu, 28 May 2020 20:18:36 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/oppo/</guid>
+      <guid>https://shibinbshaji.com/tags/oppo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pickle</title>
-      <link>http://shibinbshaji.com/tags/pickle/</link>
+      <link>https://shibinbshaji.com/tags/pickle/</link>
       <pubDate>Sun, 17 May 2020 13:31:25 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/pickle/</guid>
+      <guid>https://shibinbshaji.com/tags/pickle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://shibinbshaji.com/tags/python/</link>
+      <link>https://shibinbshaji.com/tags/python/</link>
       <pubDate>Sun, 17 May 2020 13:31:25 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/tags/python/</guid>
+      <guid>https://shibinbshaji.com/tags/python/</guid>
       <description></description>
     </item>
     

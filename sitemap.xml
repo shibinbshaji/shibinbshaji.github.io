@@ -1,124 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>http://shibinbshaji.com/tags/cyber-security/</loc>
+    <loc>https://shibinbshaji.com/tags/cyber-security/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/game/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/game-hacking-my-game-1/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/gamehacking/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/hacking/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/hackthebox/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/infosec/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/penetration-testing/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/</loc>
+    <lastmod>2023-09-16T15:22:29+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/htb-knife/</loc>
     <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/hacking/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/hackthebox/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/posts/htb-knife/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/infosec/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/penetration-testing/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/posts/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/</loc>
-    <lastmod>2021-09-03T16:23:18+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/notes/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/notes/</loc>
     <lastmod>2020-07-12T10:33:29+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/notes/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/notes/</loc>
     <lastmod>2020-07-12T10:33:29+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/notes/vim/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/notes/vim/</loc>
     <lastmod>2020-07-12T10:33:29+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/posts/intro-to-web-app-pt/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/intro-to-web-app-pt/</loc>
     <lastmod>2020-07-11T18:51:54+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/notes/unix/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/notes/unix/</loc>
     <lastmod>2020-07-02T10:38:28+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/notes/privilege-escalations/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/notes/privilege-escalations/</loc>
     <lastmod>2020-07-02T10:36:43+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/notes/assembly-exploit-dev/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/notes/assembly-exploit-dev/</loc>
     <lastmod>2020-07-02T10:20:53+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/bug-bounty/oppo-bugbounty-writeup/</loc>
     <lastmod>2020-05-28T20:18:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/bug-bounty/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/oppo-bugbounty-writeup/</loc>
     <lastmod>2020-05-28T20:18:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/bugbounty/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/bug-bounty/</loc>
     <lastmod>2020-05-28T20:18:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/oppo/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/bugbounty/</loc>
     <lastmod>2020-05-28T20:18:36+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/pickle/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/oppo/</loc>
+    <lastmod>2020-05-28T20:18:36+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/pickle/</loc>
     <lastmod>2020-05-17T13:31:25+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/tags/python/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/tags/python/</loc>
     <lastmod>2020-05-17T13:31:25+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/posts/using-pythons-pickling-to-explain-insecure-deserialization/</loc>
+  </url><url>
+    <loc>https://shibinbshaji.com/posts/using-pythons-pickling-to-explain-insecure-deserialization/</loc>
     <lastmod>2020-05-17T13:31:25+05:30</lastmod>
+  </url><url>
+    <loc>https://shibinbshaji.com/categories/</loc>
   </url>
-  
-  <url>
-    <loc>http://shibinbshaji.com/categories/</loc>
-  </url>
-  
 </urlset>

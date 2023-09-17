@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> Shibin B Shaji | A Long Overdue Write-up: How I got into the Oppo Hall of Fame </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.118.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Script kiddie | Full Stack Developer | Designer | Gamer">
+    
+    <link rel="stylesheet" href="https://shibinbshaji.com/css/style.min.3bc3fa35d9e84b19ef733119c6a0250df66531652a664b5e59e9d5fe0c37142e.css" integrity="sha256-O8P6NdnoSxnvczEZxqAlDfZlMWUqZkteWenV/gw3FC4=" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <base href="https://shibinbshaji.com">
+    
+    <link rel="shortcut icon" href="https://shibinbshaji.com/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shibinbshaji.com/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shibinbshaji.com/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shibinbshaji.com/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://shibinbshaji.com/posts/oppo-bugbounty-writeup/">
+    
+    
+    <script type="text/javascript" src="https://shibinbshaji.com/js/anatole-header.min.ed912806a856a21a5e5ded5fc93e811a3266f4cff7026a0897794ada2980d487.js" integrity="sha256-7ZEoBqhWohpeXe1fyT6BGjJm9M/3AmoIl3lK2imA1Ic="></script>
+
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body><style>
+   
+body { background: black }
+
+.blink {
+  position: relative;
+  font-family: Monaco, Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  font-size: 24px;
+  color: white;
+
+
+}
+
+.blink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+   
+  display: inline-block;
+  background-color: #606060;
+  vertical-align: top;
+  width: 10px;
+   
+  height: 24px;
+   
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+  </style>
+<div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://shibinbshaji.com/images/profile.jpg" alt="profile picture">
+        <h3 title=""><a href="/">&lt; SHIBIN B SHAJI /&gt;<span class="blink"></span></a></h3>
+        <div class="description">
+          <p>Script kiddie | Full Stack Developer | Designer | Gamer</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://www.linkedin.com/in/shibinbshaji/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://twitter.com/shibinbshaji06" rel="me" aria-label="Twitter">
+          <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/shibinbshaji/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/shibinbshaji/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="mailto:shibinbshaji007@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+        <li>
+        <a href="https://steamcommunity.com/id/shibinzz" rel="me" aria-label="steam">
+          <i class="fa fa-2x fa-steam" aria-hidden="true"></i>
+        </a>
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Shibin B Shaji 2023 </div>
+      </div>
+    </div>
+</div>
+<div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+      
+        
+        
+        
+        <li><a  href="/" title="">&lt;shibin.b.shaji/&gt;</a></li>
+        
+        
+        <li><a  href="/posts/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/notes/" title="">Notes</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="false"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+  <style>
+    img{
+      display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+    }
+    </style>
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>A Long Overdue Write-up: How I got into the Oppo Hall of Fame
+        </h3>
+        
+        </div>
+
+    <p>I don&rsquo;t do Bug Bounty programs much, so this section of the website will be as deserted as the roads when we all were in quarantine. If I happen to stumble upon some interesting bug I sit and try to dig deeper.</p>
+<p>Yes, I stumbled upon this bug. Walking down the memory lane, last year, I caught hold of a Redmi device owned by my friend, <a href="https://www.linkedin.com/in/muhammad-t-s/">Muhammad T S</a>, and it was locked. Out of curiosity I turned on the screen and saw an ad (Ads or articles on Lockscreens deserve the same place in peoples minds as pop-up ads). I clicked on all the possible links and buttons and next thing I knew, I was on the main page of Google. Thereon, I was able to browse the internet like my own device. No restrictions. And I didn&rsquo;t have to worry about the data usage.</p>
+<p>I was too lazy to report that bug as it required me to invest a good amount of time from my busy final year days at college. I thought, &ldquo;Maybe later&rdquo;. After around two months, I found out that it was reported by someone else :( . My laziness cost me a Hall of Fame in Xiaomi. :((((((</p>
+<p>Couple of days later my friend, <a href="https://www.linkedin.com/in/d3vilsnar3/">Govind P</a>, got a new Oppo phone. I checked out the phone and then locked the device. I turned on the screen and there it was, the disgusting Lockscreen ads with the same sh***y UI.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/excited-cat.gif" alt=""></p>
+<p>I thought about the steps to reproduce what I did on Redmi. I was presented with a screen as shown.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/one.jpeg" alt=""></p>
+<p>There was a &ldquo;More&rdquo; button which allowed me to read the article. I clicked on that. Clicking that opened up an article and i scrolled down to see if it showed an ad. Yes, it did and it was Google Ads.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/two.jpeg" alt=""></p>
+<p>If you ever noticed Google ads, they have a tiny close button (x) at the top right along with an info button (i). This is one of the moments where I want to say &ldquo;I have a meme for that.!!&rdquo;.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/two1.jpeg" alt=""></p>
+<p>I clicked on that (i) and it showed me this:</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/three.jpeg" alt=""></p>
+<p>It will minimize the article and show a menu like the one below.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/four.jpeg" alt=""></p>
+<p>Then I clicked on the Hamburger menu icon on the top left and another menu opened up.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/five.jpeg" alt=""></p>
+<p>Yeah you guessed it. I clicked the on the grid menu icon and guess what showed up! The Google apps. Yey!!!!!</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/six.jpeg" alt=""></p>
+<p>I could take any apps from that. But if I took Google, it took me directly to Google Search. I could search anything and redirect to any websites.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/seven1.jpeg" alt=""></p>
+<p>I could even play YouTube videos.</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/seven2.jpeg" alt=""></p>
+<p>As simple as that. No tool was employed to find out this vulnerability. It was an error in the implementation of the rarely used feature (Lockscreen ads / articles). The OS did not check for any authentication of the actions performed while in the Lockscreen. It might have assumed that it is safe because it&rsquo;s the Lockscreen. (So is it a Lockscreen Bypass??? IDK, maybe&hellip;)</p>
+<p>But wait, the article is not over!! The menu which showed Google apps was scrollable and it revealed Gmail when I scrolled down. So I clicked on that. It showed the login page of Google. Dead end? No! Because when I clicked the &lsquo;Username&rsquo; field, Google&rsquo;s Autofill showed up!!!!</p>
+<p><img src="/bug-bounty/oppo-bugbounty-writeup/eight.jpeg" alt=""></p>
+<p>Turns out, it was connected to the built in browser of the device and any passwords that were saved on that browser can Autofill in this Login page. Sadly, I could not further exploit this vulnerability as the Post Login page will be shown only after unlocking the device.</p>
+<p>I decided to be less lazy and report the issue ASAP.</p>
+<p><em><strong>April 2019</strong></em> - Reported the bug.</p>
+<p><em><strong>May 2019</strong></em> - Issue was confirmed and was rewarded 10,000 INR.</p>
+<p>The bounty took a long time to get credited, though!.</p>
+<p>Hope you liked this article. :)</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/infosec/">infosec</a><a class="tag" href="/tags/bugbounty/">bugbounty</a><a class="tag" href="/tags/oppo/">oppo</a></span>
+
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.com/js/jquery.min.e80d7e6008943348b2c88cd12f10e546083ff6a88f06b4afac7151b78886417e.js" integrity="sha256-6A1&#43;YAiUM0iyyIzRLxDlRgg/9qiPBrSvrHFRt4iGQX4="></script>
+
+
+
+
+<script type="text/javascript" src="https://shibinbshaji.com/js/bundle.min.3ebad6bf39b2e7c2f899d3ed9bc97e8c0c1ead7a1b57472e3387321f673b8077.js" integrity="sha256-PrrWvzmy58L4mdPtm8l&#43;jAwerXobV0cuM4cyH2c7gHc="></script>
+
+<script type="text/javascript" src="https://shibinbshaji.com/js/medium-zoom.min.e1c6918cbaa90022a5612f0bd71c7bf3be6d036614c5729cebfe14f7b91fa4bc.js" integrity="sha256-4caRjLqpACKlYS8L1xx7875tA2YUxXKc6/4U97kfpLw="></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-168075703-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</html></body>
+
+</html>

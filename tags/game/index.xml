@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>game on Shibin B Shaji</title>
+    <link>https://shibinbshaji.com/tags/game/</link>
+    <description>Recent content in game on Shibin B Shaji</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Sep 2023 15:22:29 +0530</lastBuildDate><atom:link href="https://shibinbshaji.com/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Game Hacking: Hacking my own game - I</title>
+      <link>https://shibinbshaji.com/posts/game-hacking-my-game-1/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.com/posts/game-hacking-my-game-1/</guid>
+      <description>It was our turn to build the CTF. We were just days away and the team had zero clue on how to design challenges for CTFs, of-course it was our first time building one.</description>
+    </item>
+    
+  </channel>
+</rss>

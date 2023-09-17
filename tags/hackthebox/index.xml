@@ -2,21 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hackthebox on Shibin B Shaji</title>
-    <link>http://shibinbshaji.com/tags/hackthebox/</link>
+    <link>https://shibinbshaji.com/tags/hackthebox/</link>
     <description>Recent content in hackthebox on Shibin B Shaji</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Sep 2021 16:23:18 +0530</lastBuildDate>
-    
-	<atom:link href="http://shibinbshaji.com/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 16 Sep 2023 15:22:29 +0530</lastBuildDate><atom:link href="https://shibinbshaji.com/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Game Hacking: Hacking my own game - I</title>
+      <link>https://shibinbshaji.com/posts/game-hacking-my-game-1/</link>
+      <pubDate>Sat, 16 Sep 2023 15:22:29 +0530</pubDate>
+      
+      <guid>https://shibinbshaji.com/posts/game-hacking-my-game-1/</guid>
+      <description>It was our turn to build the CTF. We were just days away and the team had zero clue on how to design challenges for CTFs, of-course it was our first time building one.</description>
+    </item>
     
     <item>
       <title>HackTheBox - Knife</title>
-      <link>http://shibinbshaji.com/posts/htb-knife/</link>
+      <link>https://shibinbshaji.com/posts/htb-knife/</link>
       <pubDate>Fri, 03 Sep 2021 16:23:18 +0530</pubDate>
       
-      <guid>http://shibinbshaji.com/posts/htb-knife/</guid>
+      <guid>https://shibinbshaji.com/posts/htb-knife/</guid>
       <description>This is a retired Easy Linux Box.
 Machine IP: 10.10.10.242</description>
     </item>
